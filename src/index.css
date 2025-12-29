@@ -14,3 +14,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@layer base {
+  input,
+  textarea,
+  select {
+    @apply text-base;
+  }
+}
