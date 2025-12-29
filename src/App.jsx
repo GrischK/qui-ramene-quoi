@@ -280,7 +280,7 @@ export default function App() {
               <form onSubmit={onSubmit} className="mt-4 grid gap-3">
                 <Field label="Ton nom">
                   <input
-                    className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm outline-none ring-0 placeholder:text-zinc-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+                    className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 outline-none ring-0 placeholder:text-zinc-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
                     value={form.name}
                     onChange={(e) => setForm((f) => ({...f, name: e.target.value}))}
                     placeholder="Alex"
@@ -290,7 +290,7 @@ export default function App() {
 
                 <Field label="Tu ramènes quoi">
                   <input
-                    className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+                    className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 outline-none placeholder:text-zinc-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
                     value={form.item}
                     onChange={(e) => setForm((f) => ({...f, item: e.target.value}))}
                     placeholder="Raclette, bière, dessert..."
@@ -301,7 +301,7 @@ export default function App() {
                   <div className="sm:col-span-1">
                     <Field label="Quantité">
                       <input
-                        className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+                        className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 outline-none placeholder:text-zinc-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
                         value={form.qty}
                         onChange={(e) => setForm((f) => ({...f, qty: e.target.value}))}
                         placeholder="2 paquets"
@@ -311,7 +311,7 @@ export default function App() {
                   <div className="sm:col-span-2">
                     <Field label="Note">
                       <input
-                        className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+                        className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 outline-none placeholder:text-zinc-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
                         value={form.note}
                         onChange={(e) => setForm((f) => ({...f, note: e.target.value}))}
                         placeholder="Sans gluten, sans alcool..."
