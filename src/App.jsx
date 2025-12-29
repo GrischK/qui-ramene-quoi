@@ -1,4 +1,5 @@
 import {useEffect, useMemo, useState} from "react";
+import GoogleWord from "./GoogleWord.jsx";
 
 function splitCSVLine(line) {
   const out = [];
@@ -110,6 +111,7 @@ export default function App() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [refreshing, setRefreshing] = useState(false);
+  const [titleDone, setTitleDone] = useState(false)
 
   const [form, setForm] = useState({name: "", item: "", qty: "", note: ""});
 
@@ -259,7 +261,7 @@ export default function App() {
     <div className="min-h-dvh bg-white text-zinc-900">
       <header className="border-b border-zinc-200">
         <div className="mx-auto max-w-5xl px-4 py-4">
-          <h1 className="text-lg font-semibold tracking-tight">Qui ramène quoi</h1>
+          <GoogleWord text="Qui ramène quoi ?" onDone={() => setTitleDone(true)}/>
           <p className="mt-1 text-sm text-zinc-600">
             Ajoute ta participation. La liste se met à jour automatiquement.
           </p>
@@ -291,7 +293,7 @@ export default function App() {
                     className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
                     value={form.item}
                     onChange={(e) => setForm((f) => ({...f, item: e.target.value}))}
-                    placeholder="Chips, houmous, dessert..."
+                    placeholder="Raclette, bière, dessert..."
                   />
                 </Field>
 
@@ -312,7 +314,7 @@ export default function App() {
                         className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
                         value={form.note}
                         onChange={(e) => setForm((f) => ({...f, note: e.target.value}))}
-                        placeholder="Sans gluten, j’arrive à 21h..."
+                        placeholder="Sans gluten, sans alcool..."
                       />
                     </Field>
                   </div>
@@ -343,7 +345,7 @@ export default function App() {
             </div>
 
             <div className="mt-3 text-xs text-zinc-500">
-              Astuce. Mets ton prénom en premier. Exemple: “Alex”. Pas “Moi”.
+              Astuce : Mets ton prénom en premier. Exemple: “Alex”. Pas “Moi”.
             </div>
           </section>
 
